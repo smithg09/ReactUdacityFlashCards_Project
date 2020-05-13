@@ -36,7 +36,8 @@ This app is the third of three projects required for [Udacity's React Nanodegree
 
     This Project is Tested on Android 9+
 
-
+    Special Thanks to Icons8 for illustrations / icons and Dribbble for Design. Also took some help james-priest github repository have not coppied any code.
+      
 ### Built With
 
 * [React](https://reactjs.org/)
