@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Flashify",
+    "slug": "flashify",
+    "description" : "This Application allows users to create decks, add cards into the deck and quiz themselves.Developed using React , React Naitve , Redux , Expo This app is the third of three projects required for [Udacity 's React Nanodegree program",
+    "platforms": [
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android" : {
+        "package": "com.smithgajjar.flashify",
+        "versionCode": 1
+    }
+  }
+}
