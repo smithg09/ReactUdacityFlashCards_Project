@@ -1,14 +1,17 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet, TouchableOpacity} from "react-native";
-import DeckList from '../components/DeckList'
-import { connect } from 'react-redux'
-import { initial_state } from '../reducers/deck_actions'
-import FadeAnimContainer from '../utils/FadeAnim'
+import DeckList from '../components/DeckList';
+import { connect } from 'react-redux';
+import { initial_state } from '../reducers/deck_actions';
+import { clearLocalNotification , setLocalNotification } from '../utils/notificationHandler'
+import FadeAnimContainer from '../utils/FadeAnim';
 
 class LandingScreen extends React.Component {
     componentDidMount() {
-        const { dispatch } = this.props
-        dispatch(initial_state())
+      clearLocalNotification().then(setLocalNotification);
+      const { dispatch } = this.props
+      dispatch(initial_state())
+        
     }
     render() {
         const { navigation } = this.props
