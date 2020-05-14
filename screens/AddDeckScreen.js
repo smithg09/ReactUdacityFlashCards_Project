@@ -11,6 +11,7 @@ const AddDeckScreen = (props) => {
         const DeckName = !name ? "Untitled Deck" : name
         props.dispatch(handleSaveDeck(DeckName))
             .then((deck) => {
+                navigation.navigate('LandingScreen')
                 navigation.navigate('DeckScreen', {
                     deckId: deck.id,
                     name: deck.name
