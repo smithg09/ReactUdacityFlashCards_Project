@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { Text, View, Alert, StyleSheet , TouchableOpacity, Image } from 'react-native'
-import { connect } from 'react-redux'
+import React, { useState, useEffect } from 'react';
+import { Text, View, Alert, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { connect } from 'react-redux';
 
 
 
@@ -111,6 +111,27 @@ const QuizScreen = (props) => {
                 ? "Great job you scored more than 80%"
                 : "Sorry You scored less than 80%, Try again!"}
             </Text>
+            <View
+              style={{
+                flexDirection: "column",
+                width: 300,
+                justifyContent: "space-between",
+                paddingTop: 60,
+              }}
+            >
+              <TouchableOpacity
+                style={styles.custombtn}
+                onPress={() => RestartHandler()}
+              >
+                <Text style={styles.btnText}> Restart Quiz </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.custombtn}
+                onPress={() => navigation.goBack()}
+              >
+                <Text style={styles.btnText}> Back to Deck </Text>
+              </TouchableOpacity>
+            </View>
           </View>
         ) : (
           <View style={{ alignItems: "center" }}>
@@ -226,27 +247,6 @@ const QuizScreen = (props) => {
             </View>
           </View>
         )}
-        <View
-          style={{
-            flexDirection: "column",
-            width: 300,
-            justifyContent: "space-between",
-            paddingTop: 60,
-          }}
-        >
-          <TouchableOpacity
-            style={styles.custombtn}
-            onPress={() => RestartHandler()}
-          >
-            <Text style={styles.btnText}> Restart Quiz </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={styles.custombtn}
-            onPress={() => navigation.goBack()}
-          >
-            <Text style={styles.btnText}> Back to Deck </Text>
-          </TouchableOpacity>
-        </View>
       </View>
     );
 }
