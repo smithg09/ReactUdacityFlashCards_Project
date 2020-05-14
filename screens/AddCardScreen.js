@@ -17,9 +17,6 @@ const AddCardScreen = (props) => {
       if (question === undefined || question.length < 1) {
         error = true;
       }
-      if (answer === undefined || answer.length < 1) {
-        error = true;
-      }
       if (!error) {
         const CardSet = {
           question,
@@ -28,7 +25,7 @@ const AddCardScreen = (props) => {
         dispatch(handleAddCard(deckId, CardSet));
         navigation.goBack();
       } else {
-        alert("You must enter both question and answer!!");
+        alert("You must atleast enter question!");
       }
     };
 
